@@ -64,3 +64,9 @@
 .card p {
   color: #94a3b8;
 }
+
+.loader {
+  color: #f1f5f9;
+  font-size: 22px;
+  margin-top: 20px;
+}
