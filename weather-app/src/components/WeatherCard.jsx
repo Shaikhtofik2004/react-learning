@@ -3,17 +3,19 @@ import React from 'react';
 const WeatherCard = ({ data }) => {
   if (!data || !data.main) return null;
 
+  const { name, main, weather, wind } = data;
+
   return (
     <div className="weather-box">
-      <h2>{data.name}</h2>
+      <h2>{name}</h2>
 
-      <div className="temp">{Math.round(data.main.temp)}°C</div>
+      <div className="temp">{Math.round(main.temp)}°C</div>
 
-      <div className="desc">{data.weather[0].main}</div>
+      <div className="desc">{weather[0].main}</div>
 
       <div className="weather-details">
-        <div>💨 {data.wind.speed} m/s</div>
-        <div>💧 {data.main.humidity}%</div>
+        <div>💨 {wind.speed} m/s</div>
+        <div>💧 {main.humidity}%</div>
       </div>
     </div>
   );
